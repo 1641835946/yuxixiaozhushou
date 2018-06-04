@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/post_reply_header"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip">
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/avatar_mask_post" />-->
+        <FrameLayout
+            android:layout_gravity="top"
+            android:id="@id/avatar_layout"
+            android:layout_width="27.0dip"
+            android:layout_height="27.0dip"
+            android:layout_marginRight="6.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            >
+            <ImageView
+                android:textSize="@dimen/font_42"
+                android:id="@+id/iv_icon"
+                android:background="@drawable/icon_create_room_avater_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <ImageView
+                android:background="@drawable/icon_create_room_avater_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </FrameLayout>
+
+        <TextView
+            android:textSize="@dimen/font_36"
+            android:textColor="@color/color_94a5af"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天11:38"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:textSize="@dimen/font_42"
+            android:textColor="@color/color_3788b7"
+            android:ellipsize="end"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLength="8"
+            android:layout_toRightOf="@id/avatar_layout"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView
+        android:textSize="@dimen/font_42"
+        android:textColor="@color/color_000000"
+        android:id="@+id/tv_comment"
+        android:paddingRight="20.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:lineSpacingExtra="8.0dip"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/list_view"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="0dp">
+        <!--android:layout_marginBottom="0dp"-->
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            />
+        <Button
+            android:id="@+id/btn_commit_comment"
+            android:text="提交"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            />
+    </LinearLayout>
+</LinearLayout>

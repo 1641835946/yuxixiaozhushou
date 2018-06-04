@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--fragment_create_new_room.xml-->
+<!--与activity_establish同-->
+<LinearLayout android:orientation="vertical"
+    android:background="@color/color_ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/step_pager_selected_tab_color"
+        android:layout_marginTop="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@id/avatar_layout"
+        android:layout_width="@dimen/create_room_avater_bg_side"
+        android:layout_height="@dimen/create_room_avater_bg_side"
+        android:layout_marginTop="20.0dip">
+        <ImageView
+            android:textSize="@dimen/font_42"
+            android:id="@+id/class_icon"
+            android:background="@drawable/icon_create_room_avater_bg"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <ImageView
+            android:background="@drawable/icon_create_room_avater_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.liangjie.yuxixiaozhushou.CleanEditText
+        android:id="@+id/et_class_name"
+        style="@style/login_edit_style"
+        android:layout_below="@+id/class_icon"
+        android:layout_marginTop="0.5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:singleLine="true"
+        android:hint="@string/create_class_name_hint"
+        android:inputType="text" />
+    <!--<EditText android:textSize="@dimen/font_45" android:textColorHint="#ffc5cfd6" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/name" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="20.0dip" android:hint="点此处起个名字" android:maxLength="10" />-->
+    <!--<EditText android:textSize="15.0sp" android:textColorHint="#ffc5cfd6" android:gravity="center_vertical" android:id="@id/introdution" android:background="@drawable/gray_radius_bg" android:paddingLeft="@dimen/create_room_indroduction_left" android:layout_width="fill_parent" android:layout_height="@dimen/create_room_indroduction_h" android:layout_marginTop="10.0dip" android:hint="请输入30字以内简介" android:maxLength="30" />-->
+    <Button
+        android:textSize="@dimen/font_42"
+        android:textColor="@color/color_ffffff"
+        android:id="@+id/btn_commit"
+        android:onClick="onClick"
+        android:background="@drawable/selector_send_reply_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/create_room_confirm"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="提交修改" />
+</LinearLayout>

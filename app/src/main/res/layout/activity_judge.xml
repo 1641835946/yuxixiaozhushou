@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.liangjie.yuxixiaozhushou.CleanEditText
+        style="@style/login_edit_style"
+        android:hint="请输入问题"
+        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/et_problem">
+        <requestFocus/>
+    </com.liangjie.yuxixiaozhushou.CleanEditText>
+
+    <RadioGroup
+        android:id="@+id/gendergroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="17dp"
+        android:orientation="vertical" >
+        <RadioButton
+            android:id="@+id/radioBtn_A"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="正确"/>
+        <RadioButton
+            android:id="@+id/radioBtn_B"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="错误"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:text="保存"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffffff"
+        android:background="@drawable/selector_common_btn"
+        android:layout_marginTop="15.0dip"/>
+</LinearLayout>

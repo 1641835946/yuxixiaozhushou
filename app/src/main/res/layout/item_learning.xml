@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+android:orientation="horizontal"
+android:background="@drawable/selector_post_reply"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dip"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/default_avatar"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/post_reply_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="5dip">
+
+            <TextView
+                android:textSize="@dimen/font_36"
+                android:textColor="@color/color_94a5af"
+                android:id="@+id/tv_upload_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今天11:38"
+                android:maxLength="10"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:textSize="@dimen/font_42"
+                android:textColor="@color/color_3788b7"
+                android:ellipsize="end"
+                android:id="@+id/tv_res_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="20"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+            <!--android:maxLength="8"-->
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:textSize="@dimen/font_42"
+                android:textColor="@color/color_000000"
+                android:id="@+id/tv_upload_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8.0dip"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

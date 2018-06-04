@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:padding="20dp"
+        android:src="@mipmap/ic_login_cancle_normal" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        />
+
+    <com.liangjie.yuxixiaozhushou.CleanEditText
+        android:id="@+id/et_username"
+        style="@style/login_edit_style"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iv_logo"
+        android:maxLength="32"
+        android:singleLine="true"
+        android:hint="@string/username"
+        android:inputType="text" >
+        <requestFocus />
+    </com.liangjie.yuxixiaozhushou.CleanEditText>
+
+    <RelativeLayout
+        android:id="@+id/layout_encrypted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_username"
+        android:layout_marginTop="0.5dp"
+        android:background="@android:color/white">
+        <com.liangjie.yuxixiaozhushou.CleanEditText
+            android:id="@+id/ht_problem"
+            style="@style/login_edit_style"
+            android:layout_marginTop="0.5dp"
+            android:maxLength="32"
+            android:singleLine="true"
+            android:focusable="false"/>
+        <Button
+            android:id="@+id/btn_get_problem"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="#f3f4f8"
+            android:text="@string/send_encrypted"
+            android:textColor="#B1B1B3"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <com.liangjie.yuxixiaozhushou.CleanEditText
+        android:id="@+id/et_answer"
+        style="@style/login_edit_style"
+        android:layout_below="@+id/layout_encrypted"
+        android:layout_marginTop="0.5dp"
+        android:hint="@string/answer"
+        android:maxLength="32"
+        android:singleLine="true"
+        android:inputType="text" />
+
+    <com.liangjie.yuxixiaozhushou.CleanEditText
+        android:id="@+id/et_password"
+        style="@style/login_edit_style"
+        android:layout_below="@+id/et_answer"
+        android:layout_marginTop="0.5dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btn_reset_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_login_selector"
+        android:onClick="onClick"
+        android:text="@string/reset_pwd"
+        android:textColor="#5c5c5c"
+        android:textSize="16sp"
+        android:layout_below="@+id/et_password" />
+</RelativeLayout>
